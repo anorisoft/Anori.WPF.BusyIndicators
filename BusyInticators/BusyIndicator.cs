@@ -95,6 +95,9 @@ namespace BusyIndicators
             typeof(BusyIndicator),
             new PropertyMetadata(null));
 
+        /// <summary>
+        ///     The progress value property
+        /// </summary>
         [NotNull]
         public static readonly DependencyProperty ProgressValueProperty = DependencyProperty.Register(
             "ProgressValue",
@@ -228,9 +231,9 @@ namespace BusyIndicators
         /// <value>
         ///     The progress value.
         /// </value>
-        public Style ProgressValue
+        public double ProgressValue
         {
-            get => (Style)this.GetValue(ProgressValueProperty);
+            get => (double)this.GetValue(ProgressValueProperty);
             set => this.SetValue(ProgressValueProperty, value);
         }
 
